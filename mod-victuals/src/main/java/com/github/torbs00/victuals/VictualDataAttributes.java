@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
 
-public interface VictualDataSupplier {
+public interface VictualDataAttributes {
 
     OptionalInt getHunger();
 
