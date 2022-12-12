@@ -17,7 +17,6 @@ public class Victual implements VictualsAPI {
      - 4) API compatible.
      */
 
-
     private final JavaPlugin plugin;
     private final Logger logger;
 

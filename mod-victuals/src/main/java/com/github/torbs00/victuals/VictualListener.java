@@ -13,9 +13,11 @@ import java.util.UUID;
 public class VictualListener implements Listener {
 
     private final Victual module;
+    private final VictualUsageTracker usageTracker;
 
     VictualListener(Victual module) {
         this.module = module;
+        this.usageTracker = new VictualUsageTracker();
     }
 
     @EventHandler
@@ -29,6 +31,10 @@ public class VictualListener implements Listener {
         }
 
         if(event.getHand() == EquipmentSlot.OFF_HAND) {
+            return;
+        }
+
+        if(!usageTracker.attemptUsage(uuid)) {
             return;
         }
 
